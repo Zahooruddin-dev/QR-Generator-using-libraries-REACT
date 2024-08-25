@@ -4,12 +4,20 @@ import QRCode from 'react-qr-code';
 export default function QRCodeGenerator() {
   const [qrCode, setQrCode] = useState('');
   const [input, setInput] = useState('');
-
+  const [showConent,setShowContent] = useState(false)
   function handleGenerateQrCode() {
-    setQrCode(input);
-    setInput('');
-  }
+  gen()
+  change()
+    }
+    function gen(){
+      setQrCode(input);
+      setInput('');
+      console.log(input);
+    }
+function change(){
+  setShowContent(prevContent => !prevContent)
 
+}
   return (
     <div className="qr-generator">
       <h1 className="qr-generator__title">Generate QR Code</h1>
@@ -29,6 +37,7 @@ export default function QRCodeGenerator() {
         >
           Generate
         </button>
+      <h1>{showConent && input}</h1>
       </div>
       <div className="qr-generator__code-container">
         <QRCode id="qr-code-value" value={qrCode} />
