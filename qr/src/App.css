@@ -1,0 +1,123 @@
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+/* QR Code Generator Container */
+.qr-generator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3a3a3a;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Title */
+.qr-generator__title {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+/* Input Container */
+.qr-generator__input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Input Field */
+.qr-generator__input {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  border: 1px solid #4a4a4a;
+  border-radius: 8px;
+  background-color: #2e2e2e;
+  color: #e0e0e0;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.qr-generator__input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Button */
+.qr-generator__button {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.qr-generator__button:disabled {
+  background-color: #555555;
+  cursor: not-allowed;
+}
+
+.qr-generator__button:not(:disabled):hover {
+  background-color: #0056b3;
+}
+
+/* QR Code Display */
+.qr-generator__code-container {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #2e2e2e;
+  border: 1px solid #4a4a4a;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+/* QR Code Image */
+#qr-code-value {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .qr-generator {
+    padding: 1.5rem;
+  }
+
+  .qr-generator__title {
+    font-size: 1.8rem;
+  }
+
+  .qr-generator__input,
+  .qr-generator__button {
+    font-size: 1rem;
+  }
+}
